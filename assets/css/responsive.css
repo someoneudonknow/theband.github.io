@@ -1,0 +1,88 @@
+/* mobile  */
+@media only screen and (max-width: 46.25em){
+    #nav > li{
+        display:block;
+    }
+
+    #nav li:first-child{
+        display:inline-block;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: white;
+        padding: 5px 41px;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+
+    #header .search-btn{
+        display: none;
+    }
+
+    #nav{
+        display: block;
+    }
+
+    #header .mobile-menu-btn{
+        display: block;
+    }
+    #content .member-item{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #content .member-image{
+        width: 60%;
+    }
+ 
+    .contact-form{
+        margin-top: 32px;
+    }
+
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+
+    .s-full-width,
+    .s-col-full{
+        width: 100% !important; 
+    }
+
+    .contact-form .contact-submit-btn{
+        font-size: 18px;
+    }
+}
+
+/* tablet-and-mobile  */
+@media only screen and (max-width: 63.9375em){
+    .contact-form .form-submit-btn,
+    .buy-ticket-btn{
+        padding: 15px 16px;
+    }
+    .contact-form .form-control{
+        padding: 15px;
+    }
+    .social-lists{
+        font-size: 48px;
+    }
+    #footer .social-lists a{
+        margin: 0 8px;
+    }
+    #footer .copy-right a{
+        padding: 8px 0;
+        display: inline-block;
+    }
+    #nav .subnav a{
+        padding: 5px 12px;
+    }
+    .contact-content .contact-info{
+        line-height: 2;
+    }
+}

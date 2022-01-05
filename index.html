@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <title>Theband.vn</title>
 </head>
@@ -36,6 +37,9 @@
                 <!-- begin-search-button -->
                 <div class="search-btn">
                     <i class="search-icon ti-search"></i>
+                </div>
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
                 </div>
                 <!-- End-search-button -->
         </div>
@@ -92,37 +96,37 @@
                    <!-- ticket-lists -->
                    <!-- place-lists -->
                    <div class="row place-lists">
-                       <div class="col col-third place-item">
+                       <div class="col col-third place-item member-item">
                            <img src="./assets/img/places/newyork.jpg" alt="New-York" class="place-img">
                            <div class="place-body">
                                <h3 class="place-heading">New york</h3>
                                <p class="place-time">Fri 27 Nov 2016</p>
                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                               <button class="buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                               <button class="buy-ticket-btn js-buy-ticket s-full-width">Buy Tickets</button>
                            </div>
                        </div>
                    <!-- </div> -->
 
                    <!-- <div class="place-lists"> -->
-                    <div class="col col-third place-item">
+                    <div class="col col-third place-item member-item">
                         <img src="./assets/img/places/paris.jpg" alt="paris" class="place-img">
                         <div class="place-body">
                             <h3 class="place-heading">Paris</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                            <button class="buy-ticket-btn js-buy-ticket s-full-width">Buy Tickets</button>
                         </div>
                     </div>
                 <!-- </div> -->
 
                 <!-- <div class="place-lists"> -->
-                    <div class="col col-third place-item">
+                    <div class="col col-third place-item member-item">
                         <img src="./assets/img/places/sanfran.jpg" alt="sanfran" class="place-img">
                         <div class="place-body">
                             <h3 class="place-heading">San Francisco</h3>
                             <p class="place-time">Sun 29 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-ticket-btn js-buy-ticket">Buy Tickets</button>
+                            <button class="buy-ticket-btn js-buy-ticket s-full-width">Buy Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -142,18 +146,18 @@
 
                 <div class="row contact-content">
                     
-                    <div class="col col-haft contact-info">
+                    <div class="col col-haft contact-info s-col-full">
                         <p><i class="contact-icon ti-location-pin"></i>Chicago, US</p>
                         <p><i class="contact-icon ti-mobile"></i>Phone: +00 151515</p>
                         <p><i class="contact-icon ti-email"></i>Email: mail@mail.com</p>
                     </div>
-                    <div class="col col-haft contact-form">
+                    <div class="col col-haft contact-form  s-col-full">
                         <form action="">
                                 <div class="row">
-                                    <div class="col col-haft">
+                                    <div class="col col-haft s-col-full">
                                         <input type="text" name="" placeholder="name" id="" class="form-control" required>
                                     </div>
-                                    <div class="col col-haft">
+                                    <div class="col col-haft s-col-full s-mt-8">
                                         <input type="email" name="" placeholder="email" id="" class="form-control">
                                     </div>
                                 </div>
@@ -162,7 +166,7 @@
                                         <input type="text" name="" placeholder="Message" id="" class="form-control">
                                     </div>
                                 </div>
-                                <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                                <input class="contact-submit-btn s-full-width form-submit-btn mt-16" type="submit" value="SEND">
                         </form>
                         
                     </div>
@@ -179,14 +183,14 @@
         <!-- contact-end -->
         <div id="footer">
             <div class="social-lists">
-                <a href="https://www.facebook.com/"><i class="ti-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="ti-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100035137874604"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/tran_vntu/"><i class="ti-instagram"></i></a>
                 <a href="https://www.youtube.com/"><i class="ti-youtube"></i></a>
                 <a href="https://www.pinterest.com/"><i class="ti-pinterest-alt"></i></a>
                 <a href="https://twitter.com/?lang=vi"><i class="ti-twitter-alt"></i></a>
                 <a href="https://www.linkedin.com/"><i class="ti-linkedin"></i></a>
             </div>
-            <p class="copy-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp"> w3.css</a></p>
+            <p class="copy-right">Powered by <a href="https://www.facebook.com/profile.php?id=100035137874604"> TuTran</a></p>
         </div>
 
         
@@ -246,6 +250,7 @@
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
+
         //the show modal function
         function showBuyTickets(){
             modal.classList.add('open')
@@ -267,6 +272,39 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopImmediatePropagation()
         })
+
+        // open, close menu-btn 
+
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        mobileMenu.onclick = function() {
+            var isClose = header.clientHeight === headerHeight;
+            
+            if(isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null;
+            }
+        }
+
+        //autoclose menu when choose
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        console.log(menuItems);
+
+        for(var i = 0;i < menuItems.length;i++){
+            var menuItem = menuItems[i];
+            
+        menuItem.onclick = function(){
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+               if(isParentMenu){
+                   event.preventDefault();
+            }else{
+                   header.style.height = null;
+               }
+            }
+        }
 
     </script>
     <!-- js -->
